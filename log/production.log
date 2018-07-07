@@ -1,0 +1,196 @@
+D, [2018-07-06T19:31:08.720903 #3002] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2506430109033511815);[0m
+D, [2018-07-06T19:31:08.753995 #3002] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (20.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2018-07-06T19:31:08.897039 #3002]  INFO -- : Migrating to CreateContacts (20180705025018)
+D, [2018-07-06T19:31:08.900730 #3002] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+D, [2018-07-06T19:31:09.030303 #3002] DEBUG -- :   [1m[35m (128.5ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" serial primary key, "nameF" character varying, "nameL" character varying, "email" character varying, "phone" character varying, "note" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2018-07-06T19:31:09.031082 #3002] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+D, [2018-07-06T19:31:09.032059 #3002] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2506430109033511815)[0m
+I, [2018-07-06T19:32:21.690011 #3183]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-07-06 19:32:21 -0700
+I, [2018-07-06T19:32:21.691566 #3183]  INFO -- : Processing by ContactsController#index as HTML
+I, [2018-07-06T19:32:21.698286 #3183]  INFO -- :   Rendering contacts/index.html.erb within layouts/application
+D, [2018-07-06T19:32:21.743249 #3183] DEBUG -- :   [1m[36mContact Load (30.6ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+I, [2018-07-06T19:32:21.775669 #3183]  INFO -- :   Rendered contacts/index.html.erb within layouts/application (77.2ms)
+I, [2018-07-06T19:32:21.778699 #3183]  INFO -- : Completed 200 OK in 87ms (Views: 81.0ms | ActiveRecord: 46.6ms)
+I, [2018-07-06T19:32:21.814606 #3183]  INFO -- : Started GET "/assets/application-34491da666f3db82cdaabc6ae55c4a442897918a10133985966c763ffc9ca807.js" for 127.0.0.1 at 2018-07-06 19:32:21 -0700
+F, [2018-07-06T19:32:21.815197 #3183] FATAL -- :   
+F, [2018-07-06T19:32:21.815265 #3183] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-34491da666f3db82cdaabc6ae55c4a442897918a10133985966c763ffc9ca807.js"):
+F, [2018-07-06T19:32:21.815308 #3183] FATAL -- :   
+F, [2018-07-06T19:32:21.815403 #3183] FATAL -- : actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+I, [2018-07-06T19:32:21.816353 #3183]  INFO -- : Started GET "/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css" for 127.0.0.1 at 2018-07-06 19:32:21 -0700
+F, [2018-07-06T19:32:21.817257 #3183] FATAL -- :   
+F, [2018-07-06T19:32:21.817468 #3183] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css"):
+F, [2018-07-06T19:32:21.817521 #3183] FATAL -- :   
+F, [2018-07-06T19:32:21.817562 #3183] FATAL -- : actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+I, [2018-07-06T19:32:21.829580 #3183]  INFO -- : Started GET "/favicon.ico" for 127.0.0.1 at 2018-07-06 19:32:21 -0700
+F, [2018-07-06T19:32:21.830170 #3183] FATAL -- :   
+F, [2018-07-06T19:32:21.830225 #3183] FATAL -- : ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+F, [2018-07-06T19:32:21.830261 #3183] FATAL -- :   
+F, [2018-07-06T19:32:21.830325 #3183] FATAL -- : actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+I, [2018-07-06T19:32:23.114804 #3183]  INFO -- : Started GET "/contacts/new" for 127.0.0.1 at 2018-07-06 19:32:23 -0700
+I, [2018-07-06T19:32:23.116358 #3183]  INFO -- : Processing by ContactsController#new as HTML
+I, [2018-07-06T19:32:23.179152 #3183]  INFO -- :   Rendering contacts/new.html.erb within layouts/application
+I, [2018-07-06T19:32:23.240279 #3183]  INFO -- :   Rendered contacts/_form.html.erb (59.1ms)
+I, [2018-07-06T19:32:23.240529 #3183]  INFO -- :   Rendered contacts/new.html.erb within layouts/application (61.2ms)
+I, [2018-07-06T19:32:23.240875 #3183]  INFO -- : Completed 500 Internal Server Error in 124ms (ActiveRecord: 45.9ms)
+F, [2018-07-06T19:32:23.243090 #3183] FATAL -- :   
+F, [2018-07-06T19:32:23.243195 #3183] FATAL -- : ActionView::Template::Error (undefined method `nameF' for #<Contact:0x0000560dfcb12988>):
+F, [2018-07-06T19:32:23.243509 #3183] FATAL -- :     13: 
+    14:   <div class="field">
+    15:     <%= f.label :nameF %>
+    16:     <%= f.text_field :nameF %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+F, [2018-07-06T19:32:23.243603 #3183] FATAL -- :   
+F, [2018-07-06T19:32:23.243662 #3183] FATAL -- : app/views/contacts/_form.html.erb:16:in `block in _app_views_contacts__form_html_erb___2104212587144114930_47309036455340'
+app/views/contacts/_form.html.erb:1:in `_app_views_contacts__form_html_erb___2104212587144114930_47309036455340'
+app/views/contacts/new.html.erb:3:in `_app_views_contacts_new_html_erb___38158549614792372_47309036469720'
+I, [2018-07-06T19:32:27.095819 #3183]  INFO -- : Started GET "/contacts/new" for 127.0.0.1 at 2018-07-06 19:32:27 -0700
+I, [2018-07-06T19:32:27.097102 #3183]  INFO -- : Processing by ContactsController#new as HTML
+I, [2018-07-06T19:32:27.098970 #3183]  INFO -- :   Rendering contacts/new.html.erb within layouts/application
+I, [2018-07-06T19:32:27.112613 #3183]  INFO -- :   Rendered contacts/_form.html.erb (13.2ms)
+I, [2018-07-06T19:32:27.112866 #3183]  INFO -- :   Rendered contacts/new.html.erb within layouts/application (13.7ms)
+I, [2018-07-06T19:32:27.113171 #3183]  INFO -- : Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+F, [2018-07-06T19:32:27.115381 #3183] FATAL -- :   
+F, [2018-07-06T19:32:27.115482 #3183] FATAL -- : ActionView::Template::Error (undefined method `nameF' for #<Contact:0x0000560dfc8394a0>):
+F, [2018-07-06T19:32:27.115733 #3183] FATAL -- :     13: 
+    14:   <div class="field">
+    15:     <%= f.label :nameF %>
+    16:     <%= f.text_field :nameF %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+F, [2018-07-06T19:32:27.115801 #3183] FATAL -- :   
+F, [2018-07-06T19:32:27.115870 #3183] FATAL -- : app/views/contacts/_form.html.erb:16:in `block in _app_views_contacts__form_html_erb___2104212587144114930_47309036455340'
+app/views/contacts/_form.html.erb:1:in `_app_views_contacts__form_html_erb___2104212587144114930_47309036455340'
+app/views/contacts/new.html.erb:3:in `_app_views_contacts_new_html_erb___38158549614792372_47309036469720'
+I, [2018-07-06T19:34:22.527188 #3329]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-07-06 19:34:22 -0700
+I, [2018-07-06T19:34:22.528719 #3329]  INFO -- : Processing by ContactsController#index as HTML
+I, [2018-07-06T19:34:22.535757 #3329]  INFO -- :   Rendering contacts/index.html.erb within layouts/application
+D, [2018-07-06T19:34:22.553552 #3329] DEBUG -- :   [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+I, [2018-07-06T19:34:22.559238 #3329]  INFO -- :   Rendered contacts/index.html.erb within layouts/application (23.4ms)
+I, [2018-07-06T19:34:22.560307 #3329]  INFO -- : Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 6.3ms)
+I, [2018-07-06T19:34:22.585371 #3329]  INFO -- : Started GET "/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css" for 127.0.0.1 at 2018-07-06 19:34:22 -0700
+F, [2018-07-06T19:34:22.585919 #3329] FATAL -- :   
+F, [2018-07-06T19:34:22.586036 #3329] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css"):
+F, [2018-07-06T19:34:22.586292 #3329] FATAL -- :   
+F, [2018-07-06T19:34:22.586335 #3329] FATAL -- : actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+I, [2018-07-06T19:34:22.586260 #3329]  INFO -- : Started GET "/assets/application-34491da666f3db82cdaabc6ae55c4a442897918a10133985966c763ffc9ca807.js" for 127.0.0.1 at 2018-07-06 19:34:22 -0700
+F, [2018-07-06T19:34:22.586905 #3329] FATAL -- :   
+F, [2018-07-06T19:34:22.586952 #3329] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-34491da666f3db82cdaabc6ae55c4a442897918a10133985966c763ffc9ca807.js"):
+F, [2018-07-06T19:34:22.586987 #3329] FATAL -- :   
+F, [2018-07-06T19:34:22.587090 #3329] FATAL -- : actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+I, [2018-07-06T19:34:23.529454 #3329]  INFO -- : Started GET "/contacts/new" for 127.0.0.1 at 2018-07-06 19:34:23 -0700
+I, [2018-07-06T19:34:23.531645 #3329]  INFO -- : Processing by ContactsController#new as HTML
+I, [2018-07-06T19:34:23.552205 #3329]  INFO -- :   Rendering contacts/new.html.erb within layouts/application
+I, [2018-07-06T19:34:23.562976 #3329]  INFO -- :   Rendered contacts/_form.html.erb (9.7ms)
+I, [2018-07-06T19:34:23.563066 #3329]  INFO -- :   Rendered contacts/new.html.erb within layouts/application (10.8ms)
+I, [2018-07-06T19:34:23.563199 #3329]  INFO -- : Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.7ms)
+F, [2018-07-06T19:34:23.564038 #3329] FATAL -- :   
+F, [2018-07-06T19:34:23.564079 #3329] FATAL -- : ActionView::Template::Error (undefined method `nameF' for #<Contact:0x000056368e02abf0>):
+F, [2018-07-06T19:34:23.564168 #3329] FATAL -- :     13: 
+    14:   <div class="field">
+    15:     <%= f.label :nameF %>
+    16:     <%= f.text_field :nameF %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+F, [2018-07-06T19:34:23.564191 #3329] FATAL -- :   
+F, [2018-07-06T19:34:23.564210 #3329] FATAL -- : app/views/contacts/_form.html.erb:16:in `block in _app_views_contacts__form_html_erb__4575077797569570528_47396154719400'
+app/views/contacts/_form.html.erb:1:in `_app_views_contacts__form_html_erb__4575077797569570528_47396154719400'
+app/views/contacts/new.html.erb:3:in `_app_views_contacts_new_html_erb__1959782574407255108_47396154820240'
